@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Josefin+Slab:wght@700&family=Kufam:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'Kufam', sans-serif;
+  background-color: #010E3D;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}

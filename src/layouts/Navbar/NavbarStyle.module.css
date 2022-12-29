@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 100px 0px 100px;
+}
+
+.navbar .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar .list ul {
+    display: flex;
+    gap: 100px;
+    list-style: none;
+    font-weight: 400;
+}
+
+.navbar .list ul li .link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+}
+
+
+
