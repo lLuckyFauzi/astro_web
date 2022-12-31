@@ -1,0 +1,25 @@
+.tag {
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 9px 20px;
+    width: 283px;
+    display: flex;
+    gap: 20px;
+    margin-top: 26px;
+}
+
+.tag img {
+    height: 43px;
+}
+
+.tag p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.479);
+}
+
+.tag p:nth-child(2) {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.998);
+}
