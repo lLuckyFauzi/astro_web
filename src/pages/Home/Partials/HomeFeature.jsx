@@ -12,7 +12,8 @@ const HomeFeature = () => {
     <div
       style={{
         minHeight: "100vh",
-        marginTop: "110px",
+        position: "relative",
+        top: "45px",
       }}
     >
       <div
@@ -160,7 +161,7 @@ const HomeFeature = () => {
         >
           <div
             style={{
-              marginRight: "150px",
+              marginRight: "50px",
               marginTop: "100px",
             }}
           >
@@ -241,6 +242,7 @@ const HomeFeature = () => {
             top: "100px",
             left: "400px",
             height: "400px",
+            zIndex: "-99",
           }}
         />
       </div>

@@ -1,0 +1,17 @@
+.card {
+    width: 195px;
+    padding: 22px 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card img {
+    height: 150px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+}

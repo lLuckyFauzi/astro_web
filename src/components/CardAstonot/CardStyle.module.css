@@ -1,0 +1,26 @@
+.cardAstronot {
+    width: 410px;
+    border-radius: 12px;
+    background-color: white;
+    padding: 15px 20px;
+}
+
+.cardAstronot .profile {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cardAstronot .avatar {
+    background-color: #CBCBCB;
+    border-radius: 50%;
+}
+
+.cardAstronot .avatar img {
+    height: 85px;
+}
+
+.cardAstronot .profile p {
+    font-weight: 700;
+    font-size: 25px;
+}

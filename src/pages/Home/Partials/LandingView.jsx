@@ -44,7 +44,7 @@ const LandingView = () => {
             position: "absolute",
             height: "500px",
             left: "170px",
-            bottom: "0",
+            bottom: "0px",
             zIndex: "-10",
           }}
           src={Rocket}
