@@ -14,6 +14,7 @@ const HomeFeature = () => {
         minHeight: "100vh",
         position: "relative",
         top: "45px",
+        zIndex: "100",
       }}
     >
       <div

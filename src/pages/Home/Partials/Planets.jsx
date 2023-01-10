@@ -4,6 +4,9 @@ import ScrolNav from "../../../components/ScrollNav/ScrolNav";
 import Jupiter from "/image/jupiter.png";
 import CardPlanets from "../../../components/CardPlanets/Card";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+
 const Planets = () => {
   return (
     <div
@@ -99,12 +102,41 @@ const Planets = () => {
         <div
           style={{
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "center",
+            gap: "50px",
+            paddingTop: "50px",
           }}
         >
-          <CardPlanets backgroundColor="#3272E0" />
-          <CardPlanets backgroundColor="#3272E0" />
-          <CardPlanets backgroundColor="#3272E0" />
+          <Swiper
+            slidesPerView={3}
+            slidesPerGroup={3}
+            loop={true}
+            loopFillGroupWithBlank={true}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+          >
+            {[1, 2, 3, 4, 5, 6].map(() => {
+              return (
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <SwiperSlide
+                    style={{
+                      textAlign: "center",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <CardPlanets backgroundColor="#3272E0" />
+                  </SwiperSlide>
+                </div>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </div>
