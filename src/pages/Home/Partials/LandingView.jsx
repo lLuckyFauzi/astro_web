@@ -18,6 +18,7 @@ const LandingView = () => {
   return (
     <div
       style={{
+        minHeight: "91vh",
         overflow: "hidden",
       }}
     >
