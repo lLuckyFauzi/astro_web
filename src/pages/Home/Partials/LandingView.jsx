@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../../../components/Button/Button";
 import LandingWhiteBg from "/image/backgroundLanding.png";
 import StarBg from "/image/starBg.png";
@@ -7,6 +7,14 @@ import Planets from "/image/Planets.png";
 import Astronot from "/image/astronotBro.png";
 
 const LandingView = () => {
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY);
+    });
+  });
+
   return (
     <div
       style={{
@@ -33,9 +41,10 @@ const LandingView = () => {
           style={{
             position: "absolute",
             height: "65%",
-            bottom: "30px",
+            bottom: scroll >= 20 ? scroll : "20px",
             right: "200px",
             zIndex: "-11",
+            transition: "0.5s",
           }}
           src={StarBg}
           alt=""
@@ -45,8 +54,8 @@ const LandingView = () => {
             position: "absolute",
             height: "500px",
             left: "170px",
-            bottom: "0px",
-            zIndex: "-10",
+            bottom: scroll,
+            zIndex: "90",
           }}
           src={Rocket}
           alt=""

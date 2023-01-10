@@ -13,6 +13,7 @@ const HomeFeature = () => {
       style={{
         minHeight: "100vh",
         position: "relative",
+        zIndex: "100",
       }}
     >
       <div
