@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../../../components/Button/Button";
 
 const IssTracker = () => {
@@ -47,7 +48,9 @@ const IssTracker = () => {
             marginTop: "85px",
           }}
         >
-          <Button style={{ borderRadius: "12px" }}>Track Now</Button>
+          <Link to={"/issTrackers"}>
+            <Button style={{ borderRadius: "12px" }}>Track Now</Button>
+          </Link>
         </div>
       </div>
     </div>
