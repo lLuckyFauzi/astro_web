@@ -6,6 +6,8 @@ import Alien from "/image/alien.png";
 import Meteor from "/image/meteor.png";
 import StarFeature from "/image/starFeature.png";
 import Button from "../../../components/Button/Button";
+import AstroHelmet from "/image/icons/helmet.png";
+import Satelite from "/image/satelite.png";
 
 const HomeFeature = () => {
   return (
@@ -91,7 +93,7 @@ const HomeFeature = () => {
           />
           <div>
             <img
-              src={Earth}
+              src={AstroHelmet}
               alt=""
               style={{
                 height: "65px",
@@ -104,7 +106,7 @@ const HomeFeature = () => {
                 fontSize: "16px",
               }}
             >
-              Planets
+              Astronot
             </p>
           </div>
           <hr
@@ -118,7 +120,7 @@ const HomeFeature = () => {
           />
           <div>
             <img
-              src={Earth}
+              src={Satelite}
               alt=""
               style={{
                 height: "65px",
@@ -131,7 +133,7 @@ const HomeFeature = () => {
                 fontSize: "16px",
               }}
             >
-              Planets
+              ISS Tracker
             </p>
           </div>
         </div>

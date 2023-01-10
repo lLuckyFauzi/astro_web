@@ -1,10 +1,10 @@
 .footer {
-    width: 100vw;
     height: 100%;
     background-color: #0466C8;
     padding: 45px 75px;
     color: white;
-
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer .logo {
@@ -44,4 +44,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.linkHelper {
+    display: flex;
+    gap: 150px;
+}
+
+.linkHelper .needHelp .title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.linkHelper .contact .title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.linkHelper .contact .contactItem {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
