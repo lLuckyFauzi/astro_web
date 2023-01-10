@@ -5,6 +5,7 @@ import IssTracker from "./Partials/IssTrackerDesk";
 import LandingView from "./Partials/LandingView";
 import Planets from "./Partials/Planets";
 import Sun from "/image/sun.png";
+import EarthV2 from "/image/earthv2.png";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
       <div
         style={{
           marginTop: "100px",
-          minHeight: "100vh",
+          minHeight: "80vh",
         }}
       >
         <p
@@ -42,7 +43,8 @@ const Home = () => {
       <div
         style={{
           minHeight: "100vh",
-          padding: "100px 0px",
+          position: "relative",
+          padding: "0px 100px",
         }}
       >
         <p
@@ -55,12 +57,36 @@ const Home = () => {
         >
           ISS Tracker
         </p>
-        <div>
-          <div>
-            <img src={Sun} alt="" height={"150px"} />
-          </div>
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            justifyContent: "end",
+            paddingTop: "130px",
+          }}
+        >
+          <img
+            src={Sun}
+            alt=""
+            height={"150px"}
+            style={{
+              position: "absolute",
+              left: "0",
+            }}
+          />
           <IssTracker />
         </div>
+        <img
+          src={EarthV2}
+          alt=""
+          style={{
+            width: "100%",
+            position: "absolute",
+            right: "0px",
+            bottom: "-300px",
+            zIndex: "-99",
+          }}
+        />
       </div>
     </>
   );

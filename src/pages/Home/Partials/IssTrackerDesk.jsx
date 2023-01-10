@@ -1,11 +1,11 @@
 import React from "react";
+import Button from "../../../components/Button/Button";
 
 const IssTracker = () => {
   return (
     <div>
       <div
         style={{
-          display: "flex",
           gap: "10px",
           fontWeight: "700",
           fontSize: "35px",
@@ -13,25 +13,42 @@ const IssTracker = () => {
           textAlign: "end",
         }}
       >
-        <p
-          style={{
-            color: "#0466C8",
-          }}
-        >
-          ISS
+        <p>
+          <b style={{ color: "#0466C8" }}>ISS</b> Tracker
         </p>
-        <p>Tracker</p>
       </div>
       <div
         style={{
           color: "white",
+          textAlign: "end",
         }}
       >
         <p>
           <b>Apa itu ISS Satellite?</b> sebuah stasiun luar <br /> angkasa
           modular yang terletak di orbit bumi rendah.
         </p>
-        <hr style={{}} />
+        <hr
+          style={{
+            margin: "23px 0px",
+            height: "1px",
+            width: "500px",
+            border: "none",
+            borderRadius: "12px",
+            backgroundColor: "white",
+          }}
+        />
+        <p>
+          Digunakan untuk menyediakan lokasi yang relatif aman di orbit <br />{" "}
+          rendah Bumi untuk menguji sistem pesawat ruang angkasa yang <br />{" "}
+          akan diperlukan untuk misi jangka panjang ke Bulan dan Mars.
+        </p>
+        <div
+          style={{
+            marginTop: "85px",
+          }}
+        >
+          <Button style={{ borderRadius: "12px" }}>Track Now</Button>
+        </div>
       </div>
     </div>
   );
