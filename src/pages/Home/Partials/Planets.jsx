@@ -3,6 +3,7 @@ import InfoTag from "../../../components/InfoTag/InfoTag";
 import ScrolNav from "../../../components/ScrollNav/ScrolNav";
 import Jupiter from "/image/jupiter.png";
 import CardPlanets from "../../../components/CardPlanets/Card";
+import PlanetsData from "../../../data/static/planets";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
@@ -115,7 +116,7 @@ const Planets = () => {
             navigation={true}
             modules={[Pagination, Navigation]}
           >
-            {[1, 2, 3, 4, 5, 6].map(() => {
+            {PlanetsData.map((el, idx) => {
               return (
                 <div
                   style={{
@@ -131,7 +132,12 @@ const Planets = () => {
                       justifyContent: "center",
                     }}
                   >
-                    <CardPlanets backgroundColor="#3272E0" />
+                    <CardPlanets
+                      key={el.id}
+                      name={el.name}
+                      url={el.url}
+                      backgroundColor="#3272E0"
+                    />
                   </SwiperSlide>
                 </div>
               );

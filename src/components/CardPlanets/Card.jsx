@@ -3,15 +3,24 @@ import CardStyle from "./CardStyle.module.css";
 import Earth from "/image/earth.png";
 
 const Card = (props) => {
-  const { planets, backgroundColor } = props;
+  const { backgroundColor, name, url, key } = props;
 
   return (
     <div
       className={CardStyle.card}
       style={{ backgroundColor: backgroundColor }}
     >
-      <img src={Earth} alt="" />
-      <p>{planets || "Planets"}</p>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <img src={url} key={key} alt="" />
+      </div>
+      <div>
+        <p>{name || "Planets"}</p>
+      </div>
     </div>
   );
 };
