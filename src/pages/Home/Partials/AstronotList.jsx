@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "../../../components/CardAstonot/Card";
 import Rocket from "/image/rocket2.png";
 import Astronot from "/image/astronotBro2.png";
+import DataAstronout from "../../../data/static/astronout";
 
 const AstronotList = () => {
   const [scroll, setScroll] = useState(0);
@@ -46,8 +47,18 @@ const AstronotList = () => {
           padding: "125px 0px",
         }}
       >
-        <Card />
-        <Card />
+        {DataAstronout.map((el) => {
+          return (
+            <Card
+              key={el.id}
+              name={el.name}
+              description={el.description}
+              profile_path={el.profile_path}
+              born={el.born}
+              died={el.died}
+            />
+          );
+        })}
       </div>
     </div>
   );

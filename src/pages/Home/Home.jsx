@@ -45,7 +45,7 @@ const Home = () => {
         style={{
           minHeight: "100vh",
           position: "relative",
-          padding: "0px 100px",
+          padding: "150px 100px 0px 100px",
         }}
       >
         <p

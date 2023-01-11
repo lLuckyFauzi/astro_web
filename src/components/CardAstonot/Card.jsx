@@ -2,15 +2,28 @@ import React from "react";
 import CardStyle from "./CardStyle.module.css";
 import Helmet from "/helmet.png";
 
-const Card = () => {
+const Card = (props) => {
+  const { name, description, profile_path, born, died } = props;
   return (
     <div className={CardStyle.cardAstronot}>
       <div className={CardStyle.profile}>
         <div className={CardStyle.avatar}>
-          <img src={Helmet} alt="" />
+          <img src={profile_path} alt="" />
         </div>
-        <p>Neil Amstrong</p>
+        <div>
+          <p>{name}</p>
+          <p
+            style={{
+              fontSize: "14px",
+              fontWeight: "500",
+              color: "gray",
+            }}
+          >
+            {born} - {!died ? "Now" : died}
+          </p>
+        </div>
       </div>
+      <div></div>
       <hr
         style={{
           width: "100%",
@@ -27,7 +40,7 @@ const Card = () => {
           marginTop: "20px",
         }}
       >
-        Seseorang yang pertama mendarat dibulan pada tahun 1969
+        {description}
       </p>
     </div>
   );

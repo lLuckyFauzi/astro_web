@@ -14,10 +14,14 @@
 .cardAstronot .avatar {
     background-color: #CBCBCB;
     border-radius: 50%;
+    height: 85px;
+    width: 85px;
 }
 
 .cardAstronot .avatar img {
+    width: 85px;
     height: 85px;
+    border-radius: 50%;
 }
 
 .cardAstronot .profile p {
