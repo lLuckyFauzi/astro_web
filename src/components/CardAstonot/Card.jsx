@@ -36,7 +36,7 @@ const Card = (props) => {
       <p
         style={{
           fontWeight: "400",
-          fontSize: "20px",
+          fontSize: "16px",
           marginTop: "20px",
         }}
       >

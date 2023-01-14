@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import InfoTag from "../../../components/InfoTag/InfoTag";
 import ScrolNav from "../../../components/ScrollNav/ScrolNav";
 import Jupiter from "/image/jupiter.png";
@@ -9,6 +9,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 
 const Planets = () => {
+  const [name, setName] = useState("Jupiter");
+  const [planet, setPlanet] = useState({});
+
+  const filterPlanet = PlanetsData.filter((el) => {
+    return el.name === name;
+  });
+
   return (
     <div
       style={{
@@ -47,27 +54,27 @@ const Planets = () => {
               fontWeight: "700",
             }}
           >
-            Jupiter
+            {filterPlanet[0].name}
           </p>
           <div
             style={{
               marginTop: "26px",
               fontSize: "20px",
               fontWeight: "400",
+              paddingRight: "250px",
             }}
           >
-            <p>Planet ini merupakan planet terbesar di Tata Surya.</p>
+            <p>{filterPlanet[0].description}</p>
             <p
               style={{
                 marginTop: "26px",
-                width: "400px",
               }}
             >
-              Jupiter tidak memiliki dataran, didalamnya hanya terdapat gas.
+              {filterPlanet[0].SecondDescription}
             </p>
           </div>
           <div>
-            <InfoTag />
+            <InfoTag distance={filterPlanet[0].distance} />
           </div>
         </div>
         <div>
@@ -75,7 +82,7 @@ const Planets = () => {
             style={{
               height: "336px",
             }}
-            src={Jupiter}
+            src={filterPlanet[0].url}
             alt=""
           />
         </div>
@@ -132,12 +139,14 @@ const Planets = () => {
                       justifyContent: "center",
                     }}
                   >
-                    <CardPlanets
-                      key={el.id}
-                      name={el.name}
-                      url={el.url}
-                      backgroundColor="#3272E0"
-                    />
+                    <div onClick={() => setName(el.name)} key={el.id}>
+                      <CardPlanets
+                        key={el.id}
+                        name={el.name}
+                        url={el.url}
+                        backgroundColor="#3272E0"
+                      />
+                    </div>
                   </SwiperSlide>
                 </div>
               );

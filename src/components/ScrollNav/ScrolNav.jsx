@@ -23,7 +23,6 @@ const ScrolNav = () => {
       } else {
         setActive(3);
       }
-      console.log(scroll);
     });
   });
 

@@ -2,13 +2,14 @@ import React from "react";
 import InfoTagStyle from "./InfoTag.module.css";
 import Distance from "/image/icons/distance.png";
 
-const InfoTag = () => {
+const InfoTag = (props) => {
+  const { distance } = props;
   return (
     <div className={InfoTagStyle.tag}>
       <img src={Distance} alt="" />
       <div>
         <p>Earth/Jupiter</p>
-        <p>745.38 million km</p>
+        <p>{!distance ? "On position" : distance}</p>
       </div>
     </div>
   );
